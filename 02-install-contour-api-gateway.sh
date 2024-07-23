@@ -1,10 +1,9 @@
 #/bin/bash
 set -e
 
-export KIND_EXPERIMENTAL_PROVIDER=podman
-
 # Get directory this script is located in to access script local files
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
+cd "$SCRIPT_DIR"
 
 # Install Contour API Gateway
 echo ""
@@ -43,9 +42,9 @@ spec:
       type: NodePortService
 EOF
 
-# Add a Gateway to expose the HTTP port 33301
+# Add a Gateway to expose the HTTP port 32201
 echo ""
-echo ">> Add a Gateway to expose the HTTP port 33301"
+echo ">> Add a Gateway to expose the HTTP port 32201"
 kubectl apply -f - <<EOF
 kind: Gateway
 apiVersion: gateway.networking.k8s.io/v1
@@ -57,7 +56,7 @@ spec:
   listeners:
     - name: http
       protocol: HTTP
-      port: 33301
+      port: 32201
       allowedRoutes:
         namespaces:
           from: All
