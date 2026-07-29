@@ -26,7 +26,7 @@ Versions used at time of authoring:
 
 ## Network design
 
-For this project I selected the "Service with NodePort" networking strategy to get traffic into the Kind cluster. More information about this can be found in the repo [domeales-paloit/kind-traffic-ingress-examples](https://github.com/domeales-paloit/kind-traffic-ingress-examples).
+For this project I selected the "Service with NodePort" networking strategy to get traffic into the Kind cluster. More information about this can be found in the repo [craftydomops/kind-traffic-ingress-examples](https://github.com/craftydomops/kind-traffic-ingress-examples).
 
 ## How to run
 
